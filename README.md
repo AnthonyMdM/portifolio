@@ -1,12 +1,7 @@
-# React + Vite
+Este é meu portfólio pessoal desenvolvido com React e Tailwind CSS, com deploy feito na Vercel. O principal objetivo deste projeto é apresentar de forma clara e visualmente agradável um resumo sobre mim, as ferramentas e tecnologias que domino, além de disponibilizar uma área de contato para quem quiser entrar em comunicação direta.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O layout foi pensado para ser simples, elegante e totalmente responsivo, garantindo uma boa experiência tanto em dispositivos móveis quanto em telas maiores. Ao navegar pelo site, é possível conhecer um pouco da minha trajetória profissional, visualizar as principais stacks com as quais trabalho — como JavaScript moderno, HTML5, CSS3, Git e ferramentas de versionamento — e acessar meus links para redes como GitHub e LinkedIn.
 
-Currently, two official plugins are available:
+Este portfólio é também um espaço vivo, onde pretendo atualizar meus conhecimentos e projetos à medida que evoluo na carreira como desenvolvedor.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔗 Acesse o portfólio online: [Portfólio](https://portifolio-silk-rho-98.vercel.app/)
