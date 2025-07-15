@@ -1,8 +1,20 @@
 {
   "name": "tail",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "Este é meu portfólio pessoal desenvolvido com **React** e **Tailwind CSS**, com deploy feito na **Vercel**. O principal objetivo deste projeto é apresentar de forma clara e visualmente agradável um resumo sobre mim, as ferramentas e tecnologias que domino, além de disponibilizar uma área de contato para quem quiser entrar em comunicação direta.",
+  "homepage": "https://github.com/AnthonyMdM/portifolio#readme",
+  "bugs": {
+    "url": "https://github.com/AnthonyMdM/portifolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyMdM/portifolio.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

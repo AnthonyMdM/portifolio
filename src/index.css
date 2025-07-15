@@ -1,13 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap");
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --color-secundaria: #fb1;
   --color-primaria: #ffd24d;
   --font-calSansRegular: "Cal Sans", sans-serif;
-}
-
-.mobileMe{
-  
 }
 
 .mobileButton {
@@ -41,8 +40,8 @@
   outline: none;
   background: white;
   box-shadow: 0 0 0 0.19rem #fea;
-  border-color: #fb1;
-  color: #fb1;
+  border-color: var(--color-secundaria);
+  color: var(--color-secundaria);
 }
 
 .mobileButtonActive::after {
@@ -93,13 +92,13 @@
 .wave2 {
   bottom: -1.25em;
   animation: wave 78s linear reverse infinite;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .wave3 {
   bottom: -2.5em;
   animation: wave 20s -1s reverse infinite;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 @keyframes wave {
@@ -117,5 +116,15 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@layer base {
+  .dark {
+    --color-secundaria: #66bb6a;
+    --color-primaria: #7e57c2;
+  }
+  .dark .mobileButton {
+    background: #00acc1;
   }
 }

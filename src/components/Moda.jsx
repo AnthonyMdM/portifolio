@@ -8,9 +8,12 @@ const Moda = () => {
   return (
     <>
       {/* Título adaptado: centralizado e com tamanho ajustado no mobile */}
-      <section id="sobre" className="pt-32 md:pt-40 flex justify-center items-end px-4 md:px-8">
+      <section
+        id="sobre"
+        className="pt-32 md:pt-40 flex justify-center items-end px-4 md:px-8"
+      >
         <div>
-          <h1 className="text-4xl md:text-6xl font-[Roboto] text-gray-800 mb-4 text-center md:text-left">
+          <h1 className="text-5xl md:text-7xl font-[Roboto] text-gray-800 dark:text-white mb-4 text-center md:text-left">
             <strong>Software Desenvolvedor</strong>
           </h1>
         </div>
@@ -24,7 +27,7 @@ const Moda = () => {
         } flex justify-center mt-8 px-4`}
       >
         <div className="w-full md:max-w-4xl bg-primaria rounded-4xl shadow-lg p-4 md:p-0">
-          <p className="text-base md:text-2xl font-[Poppins] text-black leading-relaxed bg-white p-4 md:pl-[25px] md:pr-[9px] md:pt-[12px] md:pb-[40px] my-2 md:mx-4 rounded-4xl text-justify">
+          <p className="text-base md:text-2xl font-[Poppins] text-black leading-relaxed bg-white dark:bg-gray-600 dark:text-white p-4 md:pl-[25px] md:pr-[9px] md:pt-[12px] md:pb-[40px] my-2 md:mx-4 rounded-4xl text-justify">
             Olá! Meu nome é Anthony. Sou graduado em Tecnologia em Sistemas para
             Internet pelo Instituto Federal de São Paulo (IFSP - São João da Boa
             Vista). Apaixonado por programação, atuando com energia e dedicação
@@ -33,7 +36,7 @@ const Moda = () => {
             excelência técnica nas soluções que desenvolvo. Seja bem-vindo ao
             meu portfólio! Aqui você encontrará projetos que evidenciam minhas
             habilidades. Sinta-se à vontade para explorar e conhecer mais sobre
-            meu trabalho.  
+            meu trabalho.
           </p>
         </div>
       </section>

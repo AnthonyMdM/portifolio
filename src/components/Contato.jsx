@@ -20,7 +20,7 @@ const Contato = () => {
         "M5K9iKTZVxCGQ8E3T"
       )
       .then(
-        (result) => {
+        () => {
           alert("Mensagem enviada com sucesso!");
           form.current.reset();
         },
@@ -39,7 +39,7 @@ const Contato = () => {
         isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
       } grid justify-center mt-5 pt-15 px-4`}
     >
-      <div className="md:w-[1000px] w-[95vw] mx-auto bg-white p-4 md:p-8 rounded-lg shadow-md">
+      <div className="md:w-[65vw] w-[85vw] mx-auto bg-white p-4 md:p-8 rounded-lg shadow-md">
         <h2 className="text-5xl font-bold text-center mb-6">
           Entre em Contato
         </h2>
@@ -55,7 +55,7 @@ const Contato = () => {
               className="block"
             >
               <div className="md:flex md:items-center md:gap-3">
-                <Github className=" md:row-2 w-10 h-10 md:w-15 md:h-15" />
+                <Github className=" w-10 h-10 md:w-15 md:h-15" />
                 <p className="hidden md:block row-2 text-[Roboto] text-xl">
                   AnthonyMdM
                 </p>
@@ -68,7 +68,7 @@ const Contato = () => {
               className="block"
             >
               <div className="md:flex md:items-center md:gap-3">
-                <Linkedin className="md:row-3 w-10 h-10 md:w-15 md:h-15" />
+                <Linkedin className="w-10 h-10 md:w-15 md:h-15" />
                 <p className="hidden md:block row-3 text-[Roboto] text-xl">
                   Anthony Mariano
                 </p>
@@ -81,7 +81,7 @@ const Contato = () => {
             className="w-full space-y-6 col-2"
           >
             <div>
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm font-medium text-gray-700 font-[Roboto]">
                 Nome
               </label>
               <input
@@ -92,7 +92,7 @@ const Contato = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm font-medium text-gray-700 font-[Roboto]">
                 E-mail
               </label>
               <input
@@ -104,7 +104,7 @@ const Contato = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm font-medium text-gray-700 font-[Roboto]">
                 Mensagem
               </label>
               <textarea
@@ -118,7 +118,7 @@ const Contato = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
+                className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 font-[Roboto]"
               >
                 Enviar
               </button>

@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeSwitch } from "./switchButton";
 
 const Header = () => {
   const [menu, setMenu] = React.useState(false);
@@ -43,8 +44,9 @@ const Header = () => {
   return (
     <>
       {/* Mobile Nav Header */}
-      <nav className="md:hidden fixed top-0 left-0 w-full h-16 z-50 bg-white shadow flex justify-between items-center px-4 text-lg">
-        <h1 className="font-[Roboto]">{title}</h1>
+      <nav className="md:hidden fixed top-0 left-0 w-full h-16 z-50  shadow flex justify-between items-center px-4 text-lg bg-primaria">
+        <ThemeSwitch />
+        <h1 className="font-[Roboto] dark:text-white">{title}</h1>
         <button
           onClick={() => setMenu(!menu)}
           className={`mobileButton ${menu ? "mobileButtonActive" : ""}`}
@@ -55,7 +57,7 @@ const Header = () => {
       {menu && (
         <div
           id="mobile-menu"
-          className="md:hidden fixed top-16 left-0 w-full bg-white z-40 shadow-md p-4 flex flex-col gap-4 text-lg"
+          className="md:hidden fixed top-16 left-0 w-full bg-white  dark:text-white dark:bg-gray-700 z-40 shadow-md p-4 flex flex-col gap-4 text-lg"
         >
           <button
             onClick={() => {
@@ -92,15 +94,18 @@ const Header = () => {
       )}
 
       {/* Desktop Nav */}
-      <nav className="hidden md:grid md:grid-cols-2 md:items-center md:h-20 md:w-full md:fixed md:top-0 md:z-50 md:backdrop-blur-md md:px-10 text-black text-lg">
+      <nav className="hidden md:flex md:items-center md:justify-between md:h-20 md:w-full md:fixed md:top-0 md:z-50 md:backdrop-blur-md md:px-10 dark:text-cyan-500 text-lg">
         <h1 className="ml-20 justify-self-start font-[Roboto] text-2xl place-self-center">
           {title}
         </h1>
-        <div className="flex justify-end gap-5 *:hover:text-white *:px-3 *:cursor-pointer">
-          <button onClick={() => scrollTo("sobre")}>Sobre</button>
-          <button onClick={() => scrollTo("habilidade")}>Habilidades</button>
-          <button>Projetos</button>
-          <button onClick={() => scrollTo("contato")}>Contato</button>
+        <div className="flex">
+          <div className="font-[Roboto] text-xl flex justify-end gap-3 *:hover:text-white *:px-3 *:cursor-pointer">
+            <button onClick={() => scrollTo("sobre")}>Sobre</button>
+            <button onClick={() => scrollTo("habilidade")}>Habilidades</button>
+            <button>Projetos</button>
+            <button onClick={() => scrollTo("contato")}>Contato</button>
+          </div>
+          <ThemeSwitch />
         </div>
       </nav>
     </>

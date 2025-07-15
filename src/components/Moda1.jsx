@@ -20,17 +20,17 @@ const Moda1 = () => {
   return (
     <section
       ref={ref}
-      className={`transition-all duration-700 ease-in-out transform ${
+      className={`transition-all duration-700 ease-in-out transform w-full ${
         isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-      } grid justify-center mt-12 px-4`}
+      } grid justify-center mt-12 px-4 `}
       id="habilidade"
     >
       {/* Container externo responsivo */}
-      <div className="flex justify-center items-center bg-[#A67B5B] h-auto md:h-[62rem] w-full max-w-[1200px] rounded-2xl shadow-lg p-4 sm:p-6">
+      <div className="flex justify-center items-center bg-[#A67B5B] h-auto md:h-[62rem] w-100 max-w-[1200px] rounded-2xl shadow-lg p-4 sm:p-6 sm:w-full">
         {/* Container interno responsivo */}
-        <div className="grid grid-rows-[auto_1fr] bg-[#fafafa] w-full h-full rounded-xl p-4 sm:p-6">
+        <div className="grid grid-rows-[auto_1fr] bg-[#fafafa]  w-full h-full rounded-xl p-4 sm:p-6">
           {/* Título responsivo */}
-          <h1 className="text-center font-[Roboto] text-2xl sm:text-4xl md:text-6xl mt-4 underline underline-offset-4">
+          <h1 className="text-center font-[Roboto] text-3xl sm:text-4xl md:text-6xl mt-4 underline underline-offset-4">
             <strong>Ferramentas Conhecidas</strong>
           </h1>
 
