@@ -1,7 +1,7 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
-import Github from "../assets/github.svg?react";
-import Linkedin from "../assets/linkedin.svg?react";
+import Github from "../assets/contato/github.svg?react";
+import Linkedin from "../assets/contato/linkedin.svg?react";
 import useVisible from "../Hook/useVisible";
 
 const Contato = () => {

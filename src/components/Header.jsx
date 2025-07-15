@@ -57,7 +57,7 @@ const Header = () => {
       {menu && (
         <div
           id="mobile-menu"
-          className="md:hidden fixed top-16 left-0 w-full bg-white  dark:text-white dark:bg-gray-700 z-40 shadow-md p-4 flex flex-col gap-4 text-lg"
+          className="md:hidden fixed top-16 left-0 w-full bg-white dark:text-white dark:bg-gray-700 z-40 shadow-md p-4 flex flex-col gap-4 text-lg"
         >
           <button
             onClick={() => {
