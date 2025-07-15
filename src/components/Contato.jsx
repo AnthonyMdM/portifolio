@@ -43,9 +43,9 @@ const Contato = () => {
         <h2 className="text-5xl font-bold text-center mb-6">
           Entre em Contato
         </h2>
-        <div className="flex flex-col md:grid md:grid-cols-[1fr_1fr] place-items-center md:items-center md:justify-self-start">
-          <div className="md:w-70 md:mr-30 flex-shrink-0 ml-0 mb-2 md:mb-40 gap-2 md:gap-10 md:grid md:grid-rows-[auto_auto_auto] flex md:ml-20">
-            <h1 className="font-[Roboto] text-3xl md:text-4xl font-bold">
+        <div className="flex flex-col md:grid md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_1fr] place-items-center md:items-center md:justify-self-start">
+          <div className="lg:w-70 md:w-40 w-30 md:mr-7 lg:mr-10 xl:mr-30 flex-shrink-0 ml-0 mb-2 md:mb-40 gap-2 md:gap-2 lg:gap-10 md:grid md:grid-rows-[auto_auto_auto] flex md:ml-5 lg:ml-10">
+            <h1 className="font-[Roboto] text-3xl lg:text-4xl font-bold">
               Anthony Mariano
             </h1>
             <a
@@ -54,9 +54,9 @@ const Contato = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="md:flex md:items-center md:gap-3">
-                <Github className=" w-10 h-10 md:w-15 md:h-15" />
-                <p className="hidden md:block row-2 text-[Roboto] text-xl">
+              <div className="md:flex md:items-center md:gap-2 lg:gap-3">
+                <Github className=" w-10 h-10 md:w-10 lg:w-15 md:h-15" />
+                <p className="hidden md:block row-2 text-[Roboto] text-sm lg:text-xl">
                   AnthonyMdM
                 </p>
               </div>
@@ -67,9 +67,9 @@ const Contato = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="md:flex md:items-center md:gap-3">
-                <Linkedin className="w-10 h-10 md:w-15 md:h-15" />
-                <p className="hidden md:block row-3 text-[Roboto] text-xl">
+              <div className="md:flex md:items-center md:gap-2 lg:gap-3">
+                <Linkedin className="w-10 h-10 md:w-10 lg:w-15 md:h-15" />
+                <p className="hidden md:block row-3 text-[Roboto] text-sm  lg:text-xl">
                   Anthony Mariano
                 </p>
               </div>

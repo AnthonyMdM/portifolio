@@ -5,17 +5,16 @@ import BackGround from "./components/BackGround";
 import Footer from "./components/Footer";
 import Contato from "./components/Contato";
 
-
 function App() {
   return (
-    <>
+    <main>
       <BackGround />
       <Header />
       <Moda />
       <Moda1 />
       <Contato />
       <Footer />
-    </>
+    </main>
   );
 }
 
