@@ -128,3 +128,66 @@
     background: #00acc1;
   }
 }
+[data-animate] {
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado inicial de cada animação */
+[data-animate="fade"] {
+  opacity: 0;
+}
+
+[data-animate="slide-up"] {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+[data-animate="slide-left"] {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+[data-animate="slide-right"] {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+[data-animate="scale"] {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* Estado visível (aplicado pelo JavaScript) */
+[data-animate].animate-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ajuste para não esconder conteúdo atrás do header */
+section {
+  scroll-margin-top: 80px;
+}
+
+@layer utilities {
+  .bg-animated-gradient {
+    background-size: 200% 200%;
+    animation: gradient-flow 15s ease infinite;
+  }
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

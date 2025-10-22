@@ -1,43 +1,46 @@
+"use client";
 import React from "react";
 import emailjs from "@emailjs/browser";
-import Github from "../assets/contato/github.svg?react";
-import Linkedin from "../assets/contato/linkedin.svg?react";
-import useVisible from "../Hook/useVisible";
-
+import Image from "next/image";
 const Contato = () => {
-  const ref = React.useRef(null); // Referência à section monitorada pelo IntersectionObserver
-  const isVisible = useVisible(ref); // Hook responsável por detectar se a section está visível na tela
-  const form = React.useRef();
-
-  const sendEmail = (e) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_f4r9a5l",
-        "template_cfw24vb",
-        form.current,
-        "M5K9iKTZVxCGQ8E3T"
-      )
-      .then(
-        () => {
-          alert("Mensagem enviada com sucesso!");
-          form.current.reset();
-        },
-        (error) => {
-          alert("Erro ao enviar. Tente novamente.");
-          console.error(error);
-        }
+    const formData = new FormData(e.currentTarget);
+
+    const templateParams = {
+      name: (formData.get("name") || "") as string,
+      email: (formData.get("email") || "") as string,
+      message: (formData.get("message") || "") as string,
+    };
+
+    try {
+      if (
+        !process.env.NEXT_PUBLIC_EMAILJS_SERVICE ||
+        !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE ||
+        !process.env.NEXT_PUBLIC_EMAILJS_USER
+      ) {
+        throw new Error("Variáveis de ambiente do EmailJS não configuradas!");
+      }
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER
       );
+
+      alert("Mensagem enviada com sucesso!");
+      e.currentTarget.reset();
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao enviar. Tente novamente.");
+    }
   };
 
   return (
-    <section
+    <div
       id="contato"
-      ref={ref}
-      className={`transition-all duration-700 ease-in-out transform ${
-        isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-      } grid justify-center mt-5 pt-15 px-4`}
+      className={`transition-all duration-700 ease-in-out transform grid justify-center mt-5 pt-15 px-4 text-black`}
     >
       <div className="md:w-[65vw] w-[85vw] mx-auto bg-white p-4 md:p-8 rounded-lg shadow-md">
         <h2 className="text-5xl font-bold text-center mb-6">
@@ -55,7 +58,13 @@ const Contato = () => {
               className="block"
             >
               <div className="md:flex md:items-center md:gap-2 lg:gap-3">
-                <Github className=" w-10 h-10 md:w-10 lg:w-15 md:h-15" />
+                <Image
+                  src={"/contato/github.svg"}
+                  alt=""
+                  width={40}
+                  height={40}
+                  className=" w-10 h-10 md:w-10 lg:w-15 md:h-15"
+                />
                 <p className="hidden md:block row-2 text-[Roboto] text-sm lg:text-xl">
                   AnthonyMdM
                 </p>
@@ -68,18 +77,20 @@ const Contato = () => {
               className="block"
             >
               <div className="md:flex md:items-center md:gap-2 lg:gap-3">
-                <Linkedin className="w-10 h-10 md:w-10 lg:w-15 md:h-15" />
+                <Image
+                  src={"/contato/linkedin.svg"}
+                  alt=""
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 md:w-10 lg:w-15 md:h-15"
+                />
                 <p className="hidden md:block row-3 text-[Roboto] text-sm  lg:text-xl">
                   Anthony Mariano
                 </p>
               </div>
             </a>
           </div>
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="w-full space-y-6 col-2"
-          >
+          <form onSubmit={sendEmail} className="w-full space-y-6 col-2">
             <div>
               <label className="block text-sm font-medium text-gray-700 font-[Roboto]">
                 Nome
@@ -109,7 +120,7 @@ const Contato = () => {
               </label>
               <textarea
                 name="message"
-                rows="5"
+                rows={5}
                 required
                 className="mt-1 w-full px-4 py-2 border rounded-md"
               ></textarea>
@@ -126,7 +137,7 @@ const Contato = () => {
           </form>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 export default Contato;
