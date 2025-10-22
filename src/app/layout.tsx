@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Portifólio Anthony",
   description: "Meu Portifólio",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.ico",
   },
 };
 
