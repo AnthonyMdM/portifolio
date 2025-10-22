@@ -53,7 +53,7 @@ export default function Projetos() {
                   {projeto.descricao}
                 </p>
                 <Link
-                  href={`/home/${projeto.slug}`}
+                  href={`/${projeto.slug}`}
                   className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg"
                 >
                   Ver Projeto
